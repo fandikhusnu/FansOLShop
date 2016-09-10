@@ -148,7 +148,7 @@
                 android:text="Oppo F1 Plus" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox1"
                 android:layout_width="125dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center_horizontal|top"
@@ -221,7 +221,7 @@
             android:layout_height="wrap_content">
 
             <CheckBox
-                android:id="@+id/checkBox3"
+                android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="25dp"
                 android:layout_gravity="right|top"
@@ -229,7 +229,7 @@
                 android:text="Oppo Neo 3" />
 
             <CheckBox
-                android:id="@+id/checkBox4"
+                android:id="@+id/checkBox3"
                 android:layout_width="125dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center_horizontal|top"
