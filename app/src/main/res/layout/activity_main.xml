@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#03A9F4"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="1"
+        tools:context="id.sch.smktelkom_mlg.tugas1.xirpl5011.fansolshop.MainActivity">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="1.58">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="350dp"
+                android:layout_height="75dp"
+                android:src="@drawable/logo1" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/Base.TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:text="Selamat datang di Fan&apos;s Online Shop " />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.39">
+
+            <EditText
+                android:id="@+id/editTextN"
+                android:layout_width="254dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right|top" />
+
+            <TextView
+                android:id="@+id/textViewN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Nama" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextT"
+                android:layout_width="254dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right|top" />
+
+            <TextView
+                android:id="@+id/textViewT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="No Telp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.55">
+
+            <TextView
+                android:id="@+id/textViewP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Provinsi Tujuan" />
+
+            <Spinner
+                android:id="@+id/spinnerP"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|top" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Kota Tujuan" />
+
+            <Spinner
+                android:id="@+id/spinnerK"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|top" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.69">
+
+            <EditText
+                android:id="@+id/editTextA"
+                android:layout_width="254dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right|top" />
+
+            <TextView
+                android:id="@+id/textViewA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Alamat" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="125dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|top"
+                android:checked="false"
+                android:text="Oppo F1 Plus" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="125dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal|top"
+                android:checked="false"
+                android:text="Oppo F1 " />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Barang Dibeli" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButtonH1"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Hitam" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonP1"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Putih" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButtonP2"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Putih" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonH2"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Hitam" />
+            </RadioGroup>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="right|top"
+                android:checked="false"
+                android:text="Oppo Neo 3" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="125dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal|top"
+                android:checked="false"
+                android:text="Oppo Joy 3" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|top"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButtonP3"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Putih" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonH3"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Hitam" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButtonH4"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Hitam" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonP4"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Putih" />
+            </RadioGroup>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewKL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kirim Lewat" />
+
+            <RadioGroup
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top">
+
+                <RadioButton
+                    android:id="@+id/radioButtonREG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:checked="false"
+                    android:text="JNE (REG)" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonYES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:checked="false"
+                    android:text="JNE (YES)" />
+
+            </RadioGroup>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonOK"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="Pesan" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewPB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Pemesanan Berhasil"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewDP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Data Pelanggan"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textViewNH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:hint="Nama" />
+
+            <TextView
+                android:id="@+id/textViewTH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="No Telepon" />
+
+            <TextView
+                android:id="@+id/textViewAH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:hint="Alamat" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:id="@+id/textViewPH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:hint="Provinsi Tujuan" />
+
+            <TextView
+                android:id="@+id/textViewKH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:hint="Kota Tujuan" />
+        </FrameLayout>
+
+    </LinearLayout>
+</ScrollView>
