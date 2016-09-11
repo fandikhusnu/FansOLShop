@@ -3,6 +3,8 @@ package id.sch.smktelkom_mlg.tugas1.xirpl5011.fansolshop;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -10,14 +12,23 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView tvPesan, tvData, tvNH, tvTH, tvPH, tvKH, tvAH;
     EditText etNama, etTelp, etAL;
     Spinner spProv, spKota;
-    RadioButton rbH1, rbH2, rbH3, rbH4, rbP1, rbP2, rbP3, rbP4, rbREG, rbYES;
+    RadioButton rbREG, rbYES;
     CheckBox cb1, cb2, cb3, cb4;
     Button bOK;
+
+    String[][] arKota = {{"JakBar", "JakSel", "JakUt", "JakTim", "JakPus"}, {"Bandung",
+            "Cirebon", "Bekasi"}, {"Semarang", "Magelang", "Surakarta"}, {"Blitar",
+            "Malang", "Surabaya", "Kediri", "Banyuwangi", "Tulungagung"}};
+    ArrayList<String> listKota = new ArrayList<>();
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +49,6 @@ public class MainActivity extends AppCompatActivity {
         spProv = (Spinner) findViewById(R.id.spinnerP);
         spKota = (Spinner) findViewById(R.id.spinnerK);
 
-        rbH1 = (RadioButton) findViewById(R.id.radioButtonH1);
-        rbH2 = (RadioButton) findViewById(R.id.radioButtonH2);
-        rbH3 = (RadioButton) findViewById(R.id.radioButtonH3);
-        rbH4 = (RadioButton) findViewById(R.id.radioButtonH4);
-        rbP1 = (RadioButton) findViewById(R.id.radioButtonP1);
-        rbP2 = (RadioButton) findViewById(R.id.radioButtonP2);
-        rbP3 = (RadioButton) findViewById(R.id.radioButtonP3);
-        rbP4 = (RadioButton) findViewById(R.id.radioButtonP4);
         rbREG = (RadioButton) findViewById(R.id.radioButtonREG);
         rbYES = (RadioButton) findViewById(R.id.radioButtonYES);
 
@@ -60,6 +63,27 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.textViewDP).setVisibility(View.GONE);
         findViewById(R.id.textViewPB).setVisibility(View.GONE);
 
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listKota);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spKota.setAdapter(adapter);
+
+        spProv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
+                listKota.clear();
+                listKota.addAll(Arrays.asList(arKota[pos]));
+                adapter.notifyDataSetChanged();
+                spKota.setSelection(0);
+            }
+
+            @Override
+
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+
+        });
+
         findViewById(R.id.buttonOK).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,10 +94,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick() {
         String nama = etNama.getText().toString();
-        String telp = etNama.getText().toString();
-        String alamat = etNama.getText().toString();
-        String prov = etNama.getText().toString();
-        String kota = etNama.getText().toString();
+        String telp = etTelp.getText().toString();
+        String alamat = etAL.getText().toString();
+
+        tvNH.setText("Nama : " + nama);
 
     }
 }
