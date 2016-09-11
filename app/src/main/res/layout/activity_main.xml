@@ -20,13 +20,13 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="115dp"
             android:layout_weight="1.58">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="350dp"
-                android:layout_height="75dp"
+                android:layout_height="90dp"
                 android:src="@drawable/logo1" />
 
             <TextView
@@ -47,7 +47,7 @@
             <EditText
                 android:id="@+id/editTextN"
                 android:layout_width="254dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_gravity="right|top" />
 
             <TextView
@@ -66,7 +66,7 @@
             <EditText
                 android:id="@+id/editTextT"
                 android:layout_width="254dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_gravity="right|top" />
 
             <TextView
@@ -92,7 +92,7 @@
             <Spinner
                 android:id="@+id/spinnerP"
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:layout_gravity="right|top"
                 android:entries="@array/provinsi" />
 
@@ -112,7 +112,7 @@
             <Spinner
                 android:id="@+id/spinnerK"
                 android:layout_width="200dp"
-                android:layout_height="30dp"
+                android:layout_height="40dp"
                 android:layout_gravity="right|top" />
         </FrameLayout>
 
@@ -124,7 +124,7 @@
             <EditText
                 android:id="@+id/editTextA"
                 android:layout_width="254dp"
-                android:layout_height="40dp"
+                android:layout_height="50dp"
                 android:layout_gravity="right|top" />
 
             <TextView
@@ -143,7 +143,7 @@
             <CheckBox
                 android:id="@+id/checkBox2"
                 android:layout_width="125dp"
-                android:layout_height="25dp"
+                android:layout_height="40dp"
                 android:layout_gravity="right|top"
                 android:checked="false"
                 android:text="Oppo F1 Plus" />
@@ -151,7 +151,7 @@
             <CheckBox
                 android:id="@+id/checkBox1"
                 android:layout_width="125dp"
-                android:layout_height="25dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center_horizontal|top"
                 android:checked="false"
                 android:text="Oppo F1 " />
@@ -170,20 +170,20 @@
             android:layout_height="wrap_content">
 
             <CheckBox
-                android:id="@+id/checkBox4"
-                android:layout_width="wrap_content"
-                android:layout_height="25dp"
-                android:layout_gravity="right|top"
-                android:checked="false"
-                android:text="Oppo Neo 3" />
-
-            <CheckBox
                 android:id="@+id/checkBox3"
                 android:layout_width="125dp"
-                android:layout_height="25dp"
+                android:layout_height="40dp"
                 android:layout_gravity="center_horizontal|top"
                 android:checked="false"
                 android:text="Oppo Joy 3" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right|bottom"
+                android:checked="false"
+                android:text="Oppo Neo 3" />
 
         </FrameLayout>
 
@@ -205,14 +205,14 @@
                 <RadioButton
                     android:id="@+id/radioButtonREG"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
+                    android:layout_height="40dp"
                     android:checked="false"
                     android:text="JNE (REG)" />
 
                 <RadioButton
                     android:id="@+id/radioButtonYES"
                     android:layout_width="wrap_content"
-                    android:layout_height="25dp"
+                    android:layout_height="40dp"
                     android:checked="false"
                     android:text="JNE (YES)" />
 
@@ -268,21 +268,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|top"
-                android:hint="Nama" />
+                android:hint="Nama"
+                android:text="" />
 
             <TextView
                 android:id="@+id/textViewTH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:hint="No Telepon" />
+                android:hint="No Telepon"
+                android:text="" />
 
             <TextView
                 android:id="@+id/textViewAH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|bottom"
-                android:hint="Alamat" />
+                android:hint="Alamat"
+                android:text="" />
         </FrameLayout>
 
         <FrameLayout
@@ -294,14 +297,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|top"
-                android:hint="Provinsi Tujuan" />
+                android:hint="Provinsi Tujuan"
+                android:text="" />
 
             <TextView
                 android:id="@+id/textViewKH"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left|center_vertical"
-                android:hint="Kota Tujuan" />
+                android:hint="Kota Tujuan"
+                android:text="" />
         </FrameLayout>
 
     </LinearLayout>

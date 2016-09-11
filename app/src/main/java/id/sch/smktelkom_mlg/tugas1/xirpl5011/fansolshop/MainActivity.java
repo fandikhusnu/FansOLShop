@@ -98,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
         String alamat = etAL.getText().toString();
 
         tvNH.setText("Nama : " + nama);
+        tvTH.setText("Telepon : " + telp);
+        tvAH.setText("Alamat : " + alamat);
+        tvPH.setText("Provinsi Kiriman : " + spProv.getSelectedItem().toString());
+        tvKH.setText("Kota Kiriman : " + spKota.getSelectedItem().toString());
 
+        findViewById(R.id.textViewDP).setVisibility(View.VISIBLE);
+        findViewById(R.id.textViewPB).setVisibility(View.VISIBLE);
     }
 }
