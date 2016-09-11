@@ -93,17 +93,58 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void doClick() {
+        if (isValid()) {
+            String nama = etNama.getText().toString();
+            String telp = etTelp.getText().toString();
+            String alamat = etAL.getText().toString();
+
+            tvNH.setText("Nama : " + nama);
+            tvTH.setText("Telepon : " + telp);
+            tvAH.setText("Alamat : " + alamat);
+            tvPH.setText("Provinsi Kiriman : " + spProv.getSelectedItem().toString());
+            tvKH.setText("Kota Kiriman : " + spKota.getSelectedItem().toString());
+
+            findViewById(R.id.textViewDP).setVisibility(View.VISIBLE);
+            findViewById(R.id.textViewPB).setVisibility(View.VISIBLE);
+        }
+    }
+
+    private boolean isValid() {
         String nama = etNama.getText().toString();
         String telp = etTelp.getText().toString();
         String alamat = etAL.getText().toString();
+        boolean valid = true;
+        if (nama.isEmpty()) {
+            etNama.setError("Nama belum diisi");
+        } else if (nama.length() < 3) {
+            etNama.setError("Nama minimal 3 karakter");
+        } else {
+            etNama.setError(null);
+        }
 
-        tvNH.setText("Nama : " + nama);
-        tvTH.setText("Telepon : " + telp);
-        tvAH.setText("Alamat : " + alamat);
-        tvPH.setText("Provinsi Kiriman : " + spProv.getSelectedItem().toString());
-        tvKH.setText("Kota Kiriman : " + spKota.getSelectedItem().toString());
+        if (telp.isEmpty()) {
+            etTelp.setError("No telepon belum diisi");
+        } else if (telp.length() <= 10 || telp.length() >= 12) {
+            etTelp.setError("Format No telepon tidak valid(10-12 karakter)");
+        } else {
+            etTelp.setError(null);
+        }
 
-        findViewById(R.id.textViewDP).setVisibility(View.VISIBLE);
-        findViewById(R.id.textViewPB).setVisibility(View.VISIBLE);
+        if (alamat.isEmpty()) {
+            etAL.setError("Alamat belum diisi");
+        } else {
+            etAL.setError(null);
+        }
+
+
+        if (rbREG.isChecked()) {
+            rbYES.setError(null);
+        } else if (rbYES.isChecked()) {
+            rbYES.setError(null);
+        } else {
+            rbYES.setError("Jasa Pengiriman");
+        }
+
+        return valid;
     }
 }
