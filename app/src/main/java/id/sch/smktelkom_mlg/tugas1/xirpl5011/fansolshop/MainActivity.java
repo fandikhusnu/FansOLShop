@@ -17,7 +17,7 @@ import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView tvPesan, tvData, tvNH, tvTH, tvPH, tvKH, tvAH;
+    TextView tvPesan, tvData, tvNH, tvTH, tvPH, tvKH, tvAH, tvBH, tvLW;
     EditText etNama, etTelp, etAL;
     Spinner spProv, spKota;
     RadioButton rbREG, rbYES;
@@ -42,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         tvPH = (TextView) findViewById(R.id.textViewPH);
         tvKH = (TextView) findViewById(R.id.textViewKH);
         tvAH = (TextView) findViewById(R.id.textViewAH);
+        tvBH = (TextView) findViewById(R.id.textViewBH);
+        tvLW = (TextView) findViewById(R.id.textViewLW);
 
         etAL = (EditText) findViewById(R.id.editTextA);
         etNama = (EditText) findViewById(R.id.editTextN);
@@ -97,12 +99,25 @@ public class MainActivity extends AppCompatActivity {
             String nama = etNama.getText().toString();
             String telp = etTelp.getText().toString();
             String alamat = etAL.getText().toString();
+            String barang1 = cb1.getText().toString();
+            String barang2 = cb2.getText().toString();
+            String barang3 = cb3.getText().toString();
+            String barang4 = cb4.getText().toString();
+            String lewat1 = rbREG.getText().toString();
+            String lewat2 = rbYES.getText().toString();
 
             tvNH.setText("Nama : " + nama);
             tvTH.setText("Telepon : " + telp);
             tvAH.setText("Alamat : " + alamat);
             tvPH.setText("Provinsi Kiriman : " + spProv.getSelectedItem().toString());
             tvKH.setText("Kota Kiriman : " + spKota.getSelectedItem().toString());
+            if (cb1.isSelected()) tvBH.setText("Barang Yang Dibeli : " + barang1);
+            if (cb2.isSelected()) tvBH.setText("Barang Yang Dibeli : " + barang2);
+            if (cb3.isSelected()) tvBH.setText("Barang Yang Dibeli : " + barang3);
+            if (cb4.isSelected()) tvBH.setText("Barang Yang Dibeli : " + barang4);
+            if (rbREG.isSelected()) tvLW.setText("Kirim Lewat : " + rbREG);
+            if (rbYES.isSelected()) tvLW.setText("Kirim Lewat : " + rbYES);
+
 
             findViewById(R.id.textViewDP).setVisibility(View.VISIBLE);
             findViewById(R.id.textViewPB).setVisibility(View.VISIBLE);
@@ -136,6 +151,17 @@ public class MainActivity extends AppCompatActivity {
             etAL.setError(null);
         }
 
+        if (cb1.isChecked()) {
+            cb4.setError(null);
+        } else if (cb2.isChecked()) {
+            cb4.setError(null);
+        } else if (cb3.isChecked()) {
+            cb4.setError(null);
+        } else if (cb4.isChecked()) {
+            cb4.setError(null);
+        } else {
+            cb4.setError("Jasa Pengiriman");
+        }
 
         if (rbREG.isChecked()) {
             rbYES.setError(null);

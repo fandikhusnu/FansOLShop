@@ -307,6 +307,27 @@
                 android:layout_gravity="left|center_vertical"
                 android:hint="Kota Tujuan"
                 android:text="" />
+
+            <TextView
+                android:id="@+id/textViewBH"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|bottom"
+                android:hint="Barang yang dibeli"
+                android:text="" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/textViewLW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:hint="Kirim lewat"
+                android:text="" />
         </FrameLayout>
 
     </LinearLayout>
