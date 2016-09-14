@@ -3,6 +3,7 @@ package id.sch.smktelkom_mlg.tugas1.xirpl5011.fansolshop;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -12,6 +13,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -63,7 +65,64 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.textViewDP).setVisibility(View.GONE);
         findViewById(R.id.textViewPB).setVisibility(View.GONE);
 
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, listKota);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spKota.setAdapter(adapter);
 
+        spProv.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long id) {
+                listKota.clear();
+                listKota.addAll(Arrays.asList(arKota[pos]));
+                adapter.notifyDataSetChanged();
+                spKota.setSelection(0);
+            }
+
+            @Override
+
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+
+        });
+
+        findViewById(R.id.buttonOK).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                doClick();
+            }
+        });
+    }
+
+    private void doClick() {
+        if (isValid()) {
+            String nama = etNama.getText().toString();
+            String telp = etTelp.getText().toString();
+            String alamat = etAL.getText().toString();
+            String barang = "";
+            String lewat = null;
+
+            tvNH.setText("Nama : " + nama);
+            tvTH.setText("Telepon : " + telp);
+            tvAH.setText("Alamat : " + alamat);
+            tvPH.setText("Provinsi Kiriman : " + spProv.getSelectedItem().toString());
+            tvKH.setText("Kota Kiriman : " + spKota.getSelectedItem().toString());
+            if (cb1.isChecked()) barang += cb1.getText() + " ";
+            if (cb2.isChecked()) barang += cb2.getText() + " ";
+            if (cb3.isChecked()) barang += cb3.getText() + " ";
+            if (cb4.isChecked()) barang += cb4.getText() + " ";
+            tvBH.setText("Barang Yang Dibeli : " + barang);
+
+            if (rbREG.isChecked()) {
+                lewat = rbREG.getText().toString();
+            } else if (rbYES.isChecked()) {
+                lewat = rbYES.getText().toString();
+            }
+            tvLW.setText("Kirim Lewat : " + lewat);
+
+            findViewById(R.id.textViewDP).setVisibility(View.VISIBLE);
+            findViewById(R.id.textViewPB).setVisibility(View.VISIBLE);
+        }
     }
 
 
