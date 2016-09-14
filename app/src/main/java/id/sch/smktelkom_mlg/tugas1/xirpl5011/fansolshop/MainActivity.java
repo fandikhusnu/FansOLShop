@@ -125,5 +125,53 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private boolean isValid() {
+        String nama = etNama.getText().toString();
+        String telp = etTelp.getText().toString();
+        String alamat = etAL.getText().toString();
+        boolean valid = true;
+        if (nama.isEmpty()) {
+            etNama.setError("Nama belum diisi");
+        } else if (nama.length() < 3) {
+            etNama.setError("Nama minimal 3 karakter");
+        } else {
+            etNama.setError(null);
+        }
 
+        if (telp.isEmpty()) {
+            etTelp.setError("No telepon belum diisi");
+        } else if (telp.length() <= 10 || telp.length() >= 12) {
+            etTelp.setError("Format No telepon tidak valid(10-12 karakter)");
+        } else {
+            etTelp.setError(null);
+        }
+
+        if (alamat.isEmpty()) {
+            etAL.setError("Alamat belum diisi");
+        } else {
+            etAL.setError(null);
+        }
+
+        if (cb1.isChecked()) {
+            cb4.setError(null);
+        } else if (cb2.isChecked()) {
+            cb4.setError(null);
+        } else if (cb3.isChecked()) {
+            cb4.setError(null);
+        } else if (cb4.isChecked()) {
+            cb4.setError(null);
+        } else {
+            cb4.setError("Jasa Pengiriman");
+        }
+
+        if (rbREG.isChecked()) {
+            rbYES.setError(null);
+        } else if (rbYES.isChecked()) {
+            rbYES.setError(null);
+        } else {
+            rbYES.setError("Jasa Pengiriman");
+        }
+
+        return valid;
+    }
 }
