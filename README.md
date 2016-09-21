@@ -1,4 +1,6 @@
-# FansOLShop
+#FansOLShop
+  <h2>Penjelasan Program : </h2>
+  <br>
   Sebuah aplikasi yang mengimplementasikan widget dasar kedalam bentuk online shop sederhana. 
   Aplikasi berisi tool dasar seperti textview,radiobutton,textedit,checkbox,button,dan lain lain.
   Pengguna dapat menginput sesuai kondisi yang telah ditentukan lewat script yang ada, misal nama, harus diisi lebih dari 3 karakter
@@ -10,7 +12,7 @@
 
 https://drive.google.com/open?id=0B3nZcICFqNyWQktvQVpDUTJzaWc
 
-Fandi Khusnu Pratama
-XI RPL 5 /11
-4711/1430.070
-SMK TELKOM MALANG
+Fandi Khusnu Pratama <br>
+XI RPL 5 /11 <br>
+4711/1430.070 <br>
+SMK TELKOM MALANG <br>
